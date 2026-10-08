@@ -1,0 +1,94 @@
+{
+  "common_relationship_limits": {
+    "Self": {
+      "min_age": 18,
+      "max_age": 80,
+      "max_members": 1
+    },
+    "Spouse": {
+      "min_age": 18,
+      "max_age": 80,
+      "max_members": 1
+    },
+    "Child": {
+      "min_age": 0,
+      "max_age": 25,
+      "max_members": 2
+    },
+    "Parent": {
+      "min_age": 40,
+      "max_age": 80,
+      "max_members": 2
+    },
+    "Parent-in-law": {
+      "min_age": 40,
+      "max_age": 80,
+      "max_members": 2
+    }
+  },
+  "client_profiles": {
+    "tetris_innovations": {
+      "orientation": "wide_to_long",
+      "age_band_separator": "-",
+      "included_relationships": [
+        "Self",
+        "Spouse",
+        "Child"
+      ],
+      "excluded_source_groups": [
+        "Father",
+        "Mother"
+      ],
+      "gender_source": "not supplied"
+    },
+    "bambrew": {
+      "orientation": "wide_to_long",
+      "age_band_separator": "/",
+      "included_relationships": [
+        "Self",
+        "Spouse",
+        "Child",
+        "Parent"
+      ],
+      "excluded_source_groups": [
+        "Mother Inlaw",
+        "Father Inlaw"
+      ],
+      "child_limit": 4,
+      "gender_source": "partial / manual for Self, Spouse, Child"
+    },
+    "sunjewels": {
+      "orientation": "long",
+      "relationship_map": {
+        "Self": "Self",
+        "Spouse": "Spouse",
+        "Mother": "Parent",
+        "Father": "Parent",
+        "Child 1": "Child",
+        "Child 2": "Child"
+      }
+    },
+    "texan_labs": {
+      "orientation": "long",
+      "relationship_map": {
+        "Self": "Self",
+        "Spouse": "Spouse",
+        "Dependent Child1": "Child",
+        "Dependent Child2": "Child"
+      }
+    }
+  },
+  "runtime_inputs": {
+    "ghi_sum_insured": "user supplied at runtime",
+    "child_limit": "user supplied at runtime",
+    "max_dependents": "user configurable",
+    "spouse_limit": "user configurable",
+    "parent_limit": "user configurable",
+    "parent_inlaw_limit": "user configurable"
+  }
+}
+
+## v9.0 — Naming update
+- Tool name: **📊 Need Correction & Correction Tool**
+- Original source sheets are preserved as **<Original Sheet Name> (Raw Data)**.
+- Corrected Data remains separate and does not overwrite the raw sheet.
